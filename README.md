@@ -1,3 +1,5 @@
+
+This is a simple nestjs CRUD operation API. Users can be resgister and login. After login, Users are given access token of which they can access the task endpoints with the token. A user can create, update, delete, and update tasks. Each user has access to only those tasks created by him or her.
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
