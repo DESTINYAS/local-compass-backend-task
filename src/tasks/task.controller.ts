@@ -32,6 +32,10 @@ export class TaskController {
   constructor(private readonly taskService: TaskService) {}
 
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    description:
+      'Creates a new task for a user.',
+  })
   @Post()
   @ApiResponse({ status: HttpStatus.CREATED, description: 'Task created successfully' })
   @ApiBadRequestResponse({ description: 'Failed to create task' })

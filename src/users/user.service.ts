@@ -1,7 +1,6 @@
 import { Injectable, BadRequestException, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-// import { User } from './entity/user.entity';
 import { CreateUserDto } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
@@ -31,7 +30,7 @@ export class UserService {
 
     // Create a new user with the hashed password
     let newUser = new this.userModel({ email, password: hashedPassword });
-
+  // returns all the user details including password
     return  newUser.save();
   }
   
